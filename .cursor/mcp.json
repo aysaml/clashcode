@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "clashcode": {
+      "command": "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "args": [
+        "-m",
+        "clashcode.mcp.server"
+      ],
+      "cwd": "/Users/aysaml/clashcode"
+    }
+  }
+}
