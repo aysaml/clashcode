@@ -20,8 +20,8 @@ class MarkdownReporter:
 
         # Summary
         lines.append("## 概览\n")
-        lines.append(f"| 指标 | 值 |")
-        lines.append(f"|------|-----|")
+        lines.append("| 指标 | 值 |")
+        lines.append("|------|-----|")
         lines.append(f"| 分析耗时 | {result.execution_time:.2f}s |")
         lines.append(f"| 变更文件数 | {len(result.file_changes)} |")
         lines.append(f"| 发现漏洞总数 | {len(result.vulnerabilities)} |")
@@ -77,7 +77,7 @@ class MarkdownReporter:
                     lines.append(f"- **描述**: {v.description}")
 
                     if v.poc:
-                        lines.append(f"- **POC**:")
+                        lines.append("- **POC**:")
                         lines.append(f"```python\n{v.poc}\n```")
 
                     if v.fix_suggestion:
@@ -92,7 +92,7 @@ class MarkdownReporter:
                             if code:
                                 lines.append(f"<details><summary>{name}</summary>\n")
                                 lines.append(f"```python\n{code}\n```\n")
-                                lines.append(f"</details>\n")
+                                lines.append("</details>\n")
 
                     lines.append("---\n")
         else:

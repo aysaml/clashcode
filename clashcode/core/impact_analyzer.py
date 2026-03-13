@@ -122,7 +122,7 @@ class ImpactAnalyzer:
         edge = [n for n in graph.impact_nodes if n.impact_level == ImpactLevel.EDGE]
 
         lines = [
-            f"**影响范围概览**",
+            "**影响范围概览**",
             f"- 变更文件: {len(graph.changed_files)}",
             f"- 直接影响: {len(direct)} 个节点",
             f"- 间接影响: {len(indirect)} 个节点",

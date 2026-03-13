@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import json
 import logging
-import sys
 from pathlib import Path
 from typing import Optional
 
@@ -132,7 +131,7 @@ def fix(
 ) -> None:
     """修复指定漏洞"""
     setup_logging(verbose)
-    console.print(f"[yellow]修复功能需要配合分析结果使用，请通过 MCP 或 CLI analyze 先获取漏洞信息[/]")
+    console.print("[yellow]修复功能需要配合分析结果使用，请通过 MCP 或 CLI analyze 先获取漏洞信息[/]")
     console.print(f"漏洞 ID: {vuln_id}, 策略: {strategy}")
 
 

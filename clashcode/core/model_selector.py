@@ -12,7 +12,7 @@ import logging
 import random
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Dict, List, Optional
+from typing import Dict, List
 
 from .config import LLMConfig
 from .llm import BaseLLMClient, LLMClientFactory
