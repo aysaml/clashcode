@@ -95,7 +95,7 @@ class TestMarkdownReporter:
         output = tmp_path / "report.md"
         reporter.generate(sample_result, output)
         assert output.exists()
-        assert "ClashCode" in output.read_text()
+        assert "ClashCode" in output.read_text(encoding="utf-8")
 
 
 class TestJSONReporter:
@@ -110,7 +110,7 @@ class TestJSONReporter:
         reporter = JSONReporter()
         output = tmp_path / "report.json"
         reporter.generate(sample_result, output)
-        data = json.loads(output.read_text())
+        data = json.loads(output.read_text(encoding="utf-8"))
         assert data["summary"]["high"] == 1
 
 
